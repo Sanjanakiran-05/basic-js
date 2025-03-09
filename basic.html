@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Javascript</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            background-image: url(bg.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mone {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .txt {
+            font-family: monospace;
+            color: #ababab;
+        }
+
+        .b1 {
+            background: #000000;
+            background: -webkit-linear-gradient(to right, #434343, #000000);
+            background: linear-gradient(to right, #434343, #111111);
+            border: none;
+            color: rgb(255, 255, 255);
+            width: 120px;
+        }
+        .p1{
+            margin-left: 40px;
+            margin-bottom: 15px;
+        }
+        .p2{
+            margin-left: 80px;
+            margin-bottom: 15px;
+        }
+        .p3{
+            margin-left: 35px;
+            margin-bottom: 15px;
+        }
+        .p4{
+            margin-left: 10px;
+            margin-bottom: 15px;
+        }
+        .p5{
+            margin-left: 95px;
+            margin-bottom: 15px;
+        }
+        .p6{
+            margin-left: 80px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="mone">
+            <h1 class="txt">Who Played Who?</h1>
+            <div  id="m1">
+                <img src="marvel.jpg" alt="" width="300" class="rounded">
+            </div>
+            <div class="d-none text-light" id="p1">
+                <img src="p1.jpg" alt="" width="200" class="p1">
+                <h5><b>Character: </b>Tony Stark/Iron Man</h5>
+                <h5><b>Actor: </b>Robert Downey Jr</h5>
+            </div>
+            <div class="d-none text-light" id="p2">
+                <img src="p2.jpg" alt="" width="200" class="p2">
+                <h5><b>Character: </b>Steve Rogers/Captain America</h5>
+                <h5><b>Actor: </b>Chris Evans</h5>
+            </div>
+            <div class="d-none text-light" id="p3">
+                <img src="p3.jpg" alt="" width="200" class="p3">
+                <h5><b>Character: </b>Bruce Banner/Hulk</h5>
+                <h5><b>Actor: </b>Mark Ruffalo</h5>
+            </div>
+            <div class="d-none text-light" id="p4">
+                <img src="p4.jpg" alt="" width="200" class="p4">
+                <h5><b>Character: </b>Thor</h5>
+                <h5><b>Actor: </b>Chris Hemsworth</h5>
+            </div>
+            <div class="d-none text-light" id="p5">
+                <img src="p5.jpg" alt="" width="200" class="p5">
+                <h5><b>Character: </b>Natasha Romanoff/Black Widow</h5>
+                <h5><b>Actor: </b>Scarlett Johansson</h5>
+            </div>
+            <div class="d-none text-light" id="p6">
+                <img src="p6.jpg" alt="" width="200" class="p6">
+                <h5><b>Character: </b>Clint Barton/Hawkeye/Ronin</h5>
+                <h5><b>Actor: </b>Jeremy Renner</h5>
+            </div>
+            <button class="btn btn-outline-dark b1" onclick="disappear1()" id="btn1">Check out</button>
+            <button class="btn btn-outline-dark b1 d-none" onclick="disappear2()" id="btn2">Next</button>
+            <button class="btn btn-outline-dark b1 d-none" onclick="disappear3()" id="btn3">Next</button>
+            <button class="btn btn-outline-dark b1 d-none" onclick="disappear4()" id="btn4">Next</button>
+            <button class="btn btn-outline-dark b1 d-none" onclick="disappear5()" id="btn5">Next</button>
+            <button class="btn btn-outline-dark b1 d-none" onclick="disappear6()" id="btn6">Next</button>
+            <button class="btn btn-outline-dark b1 d-none" onclick="disappear7()" id="btn7">The End</button>
+        </div>
+
+    </div>
+
+    <script>
+        function disappear1() {
+            document.getElementById('m1').classList.toggle('d-none');
+            document.getElementById('p1').classList.toggle('d-none');
+            document.getElementById('btn1').classList.toggle('d-none');
+            document.getElementById('btn2').classList.toggle('d-none');
+        }
+        function disappear2() {
+            document.getElementById('p1').classList.toggle('d-none');
+            document.getElementById('p2').classList.toggle('d-none');
+            document.getElementById('btn2').classList.toggle('d-none');
+            document.getElementById('btn3').classList.toggle('d-none');
+        }
+        function disappear3() {
+            document.getElementById('p2').classList.toggle('d-none');
+            document.getElementById('p3').classList.toggle('d-none');
+            document.getElementById('btn3').classList.toggle('d-none');
+            document.getElementById('btn4').classList.toggle('d-none');
+        }
+        function disappear4() {
+            document.getElementById('p3').classList.toggle('d-none');
+            document.getElementById('p4').classList.toggle('d-none');
+            document.getElementById('btn4').classList.toggle('d-none');
+            document.getElementById('btn5').classList.toggle('d-none');
+        }
+        function disappear5() {
+            document.getElementById('p4').classList.toggle('d-none');
+            document.getElementById('p5').classList.toggle('d-none');
+            document.getElementById('btn5').classList.toggle('d-none');
+            document.getElementById('btn6').classList.toggle('d-none');
+        }
+        function disappear6() {
+            document.getElementById('p5').classList.toggle('d-none');
+            document.getElementById('p6').classList.toggle('d-none');
+            document.getElementById('btn6').classList.toggle('d-none');
+            document.getElementById('btn7').classList.toggle('d-none');
+        }
+        function disappear7() {
+            document.getElementById('p6').classList.toggle('d-none');
+            document.getElementById('m1').classList.toggle('d-none');
+            document.getElementById('btn7').classList.toggle('d-none');
+            document.getElementById('btn1').classList.toggle('d-none');
+        }
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
